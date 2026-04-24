@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelino Ikuma | Desenvolvedor & Pentester</title>
+    <title>Marcelino Ikuma | Dev & Pentester</title>
     <style>
         :root {
             --primary: #00d4ff;
@@ -21,9 +21,9 @@
             line-height: 1.6;
         }
 
-        /* Hero Section Dinâmica */
+        /* Hero Section */
         .hero {
-            height: 70vh;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -47,17 +47,19 @@
             max-width: 600px;
         }
 
+        /* Container Principal */
         .main-content {
             max-width: 1100px;
-            margin: -100px auto 50px;
+            margin: 0 auto 50px;
             padding: 0 20px;
         }
 
-        /* Grid de Destaques */
+        /* Grid de Destaques - Espaçamento corrigido */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
+            margin-top: 60px; /* Aumentado para não colar no cabeçalho */
             margin-bottom: 60px;
         }
 
@@ -73,10 +75,11 @@
         .card:hover {
             border-color: var(--primary);
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
         }
 
         .section-title {
-            margin: 60px 0 30px;
+            margin: 80px 0 30px;
             font-size: 2rem;
             display: flex;
             align-items: center;
@@ -91,21 +94,17 @@
         }
 
         /* Projetos */
-        .project-list {
-            display: grid;
-            gap: 20px;
-        }
-
         .project-item {
             background: rgba(255, 255, 255, 0.03);
             border-left: 4px solid var(--primary);
-            padding: 20px;
+            padding: 25px;
             border-radius: 0 12px 12px 0;
+            margin-bottom: 20px;
         }
 
-        .project-item h3 { color: var(--primary); margin-bottom: 5px; }
+        .project-item h3 { color: var(--primary); margin-bottom: 8px; }
 
-        /* Tech Stack */
+        /* Tags */
         .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
         .tag {
             background: rgba(0, 212, 255, 0.1);
@@ -116,28 +115,59 @@
             border: 1px solid rgba(0, 212, 255, 0.3);
         }
 
+        /* Redes Sociais */
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+        }
+
+        /* Rodapé de Contato */
         .contact-footer {
             text-align: center;
             padding: 60px 20px;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 20px;
+            margin-top: 100px;
         }
 
-        .btn {
+        .btn-main {
             display: inline-block;
-            padding: 12px 30px;
+            margin-top: 20px;
+            padding: 15px 40px;
             background: var(--primary);
             color: var(--bg-dark);
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 50px;
             transition: 0.3s;
         }
 
-        .btn:hover { background: #fff; transform: scale(1.05); }
+        .btn-main:hover { background: #fff; transform: translateY(-3px); }
 
         @media (max-width: 768px) {
-            .main-content { margin-top: -50px; }
+            .social-container { flex-direction: column; align-items: center; }
+            .social-link { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -145,12 +175,18 @@
 
     <section class="hero">
         <h1>Marcelino Ikuma</h1>
-        <p>Desenvolvedor Backend (Laravel) & Especialista em Segurança Ofensiva.</p>
+        <p>Desenvolvedor Backend (Laravel) & Web Pentester[cite: 4, 9].</p>
         <div class="tags" style="justify-content: center; margin-top: 20px;">
-            <span class="tag">PHP / Laravel</span>
-            <span class="tag">Web Pentesting</span>
-            <span class="tag">Cisco Networking</span>
+            <span class="tag">PHP & Laravel</span>
+            <span class="tag">Redes & TCP/IP</span>
             <span class="tag">CyberOps</span>
+            <span class="tag">Offensive Security</span>
+        </div>
+        
+        <div class="social-container">
+            <a href="https://wa.me/244953727352" class="social-link" target="_blank">WhatsApp</a>
+            <a href="https://ao.linkedin.com/in/marcelino-ikuma-92b05b296" class="social-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Marcelino-Ikuma" class="social-link" target="_blank">GitHub</a>
         </div>
     </section>
 
@@ -159,70 +195,42 @@
         <div class="features-grid">
             <div class="card">
                 <h3>🛡️ Segurança de Elite</h3>
-                <p>Reconhecido no programa Bug Bounty da <strong>Toyota (Top 12)</strong> e certificado em CyberOps e Redes pela Cisco.</p>
+                <p>Reconhecido no programa <strong>Toyota (Top 12)</strong> e especialista em auditorias de segurança web e mobile[cite: 6, 21].</p>
             </div>
             <div class="card">
                 <h3>🚀 Código Escalável</h3>
-                <p>Especialista em criar APIs REST e sistemas web utilizando o ecossistema Laravel com foco em performance.</p>
+                <p>Desenvolvimento de APIs REST e sistemas de gestão complexos utilizando <strong>Laravel</strong>[cite: 6, 9, 40].</p>
             </div>
         </div>
 
         <h2 class="section-title">Sobre Mim</h2>
-        <div class="card" style="margin-bottom: 40px;">
+        <div class="card">
             <p>
-                Sou estudante de Informática na 13ª classe do <strong>ITEL</strong>. Minha jornada é movida pela curiosidade de entender como as coisas quebram para poder construí-las de forma inquebrável. 
-                Hoje, uno meu conhecimento em <strong>redes (TCP/IP e Subnetting)</strong>  com a prática de <strong>segurança ofensiva</strong> para entregar software de alto nível.
+                Estudante de Informática na 13ª classe do <strong>ITEL</strong>[cite: 43, 45]. Sou um desenvolvedor focado em segurança ofensiva, unindo conhecimentos sólidos em <strong>redes</strong> e <strong>cibersegurança</strong> para construir aplicações resilientes[cite: 5, 6, 48].
             </p>
         </div>
 
-        <h2 class="section-title">Projetos em Destaque</h2>
+        <h2 class="section-title">Projetos de Impacto</h2>
         <div class="project-list">
             <div class="project-item">
                 <h3>📍 API de Geolocalização</h3>
-                <p>Desenvolvi uma solução inovadora focada em causas sociais para a localização de pessoas desaparecidas utilizando reconhecimento facial.</p>
-                <div class="tags">
-                    <span class="tag">PHP/Laravel</span><span class="tag">Python</span><span class="tag">Firebase Notifications</span><span class="tag">API REST</span><span class="tag">Backend</span>
-                </div>
+                <p>Solução backend desenvolvida para auxiliar na localização de pessoas desaparecidas[cite: 35, 38].</p>
             </div>
             <div class="project-item">
-                <h3>🏆 Área Desportiva ITEL</h3>
-                <p>Sistema completo para gestão de campeonatos desportivos, facilitando a organização e o acompanhamento de resultados.</p>
-                <div class="tags">
-                    <span class="tag">Laravel</span><span class="tag">Gestão de Dados</span>
-                </div>
+                <h3>🏆 Gestão Desportiva ITEL</h3>
+                <p>Sistema web completo para o controle e organização do campeonato desportivo da instituição[cite: 40, 41].</p>
             </div>
             <div class="project-item">
                 <h3>🏠 Sistema Imobiliário</h3>
-                <p>Plataforma web para venda e arrendamento de imóveis com foco em experiência do usuário e segurança de transações.</p>
-                <div class="tags">
-                    <span class="tag">Laravel</span>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Habilidades & Ferramentas</h2>
-        <div class="features-grid">
-            <div class="card">
-                <h4>Desenvolvimento</h4>
-                <div class="tags">
-                    <span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">Python</span><span class="tag">SQL</span>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Pentest & Redes</h4>
-                <div class="tags">
-                    <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">OWASP TOP 10</span><span class="tag">Wireshark</span><span class="tag">CCNA</span>
-                </div>
+                <p>Plataforma robusta para venda e arrendamento de imóveis[cite: 34, 36].</p>
             </div>
         </div>
 
         <div class="contact-footer">
-            <h2>Vamos trabalhar juntos?</h2>
-            <p style="margin-bottom: 20px;">Estou disponível para projetos de desenvolvimento e auditorias de segurança.</p>
-            <p>📍 Luanda, Viana | 📞 +244 953 727 352 </p>
-            <div style="margin-top: 30px;">
-                <a href="mailto:marcelinoikuma@gmail.com" class="btn">Enviar E-mail</a>
-            </div>
+            <h2>Vamos elevar a segurança do seu projeto?</h2>
+            <p>Luanda, Viana - Vila de Viana </p>
+            <p>marcelinoikuma@gmail.com </p>
+            <a href="mailto:marcelinoikuma@gmail.com" class="btn-main">Falar por E-mail</a>
         </div>
 
     </main>
