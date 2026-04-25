@@ -165,6 +165,89 @@
 
         .btn-main:hover { background: #fff; transform: translateY(-3px); }
 
+        .courses-section {
+
+            margin-bottom: 80px;
+
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(10, 14, 39, 0.8));
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .course-card:hover::before {
+            left: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d4ff;
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .course-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .course-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00d4ff;
+        }
+
+        .course-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .social-container { flex-direction: column; align-items: center; }
             .social-link { width: 100%; justify-content: center; }
@@ -181,6 +264,7 @@
             <span class="tag">Redes & TCP/IP</span>
             <span class="tag">CyberOps</span>
             <span class="tag">Offensive Security</span>
+            <span class="tag">Read Team</span>
         </div>
         
         <div class="social-container">
@@ -195,7 +279,7 @@
         <div class="features-grid">
             <div class="card">
                 <h3>🛡️ Segurança de Elite</h3>
-                <p>Reconhecido no programa <strong>Toyota (Top 12)</strong> e especialista em auditorias de segurança web e mobile.</p>
+                <p>Reconhecido no programa de bug bounty da <strong>Toyota (Top 12) em 2025</strong> e especialista em auditorias de segurança web e mobile.</p>
             </div>
             <div class="card">
                 <h3>🚀 Código Escalável</h3>
@@ -235,18 +319,74 @@
             </div>
         </div>
 
+        <h2 class="section-title">Cursos Adicionais</h2>
+    <section class="courses-section">
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-icon">🔐</div>
+                <h3>CCNA 1</h3>
+                <p>Fundamentos de Redes. Introdução ao modelo OSI, protocolo TCP/IP e configuração básica de dispositivos.</p>
+                <span class="course-badge">Cisco</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🌐</div>
+                <h3>CCNA 2</h3>
+                <p>Roteamento e Switching. Protocolos de roteamento dinâmico, VLAN e segurança de rede.</p>
+                <span class="course-badge">Cisco</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🔗</div>
+                <h3>CCNA 3</h3>
+                <p>Escalabilidade de Redes. Implementação de OSPF, EIGRP e tecnologias avançadas de roteamento.</p>
+                <span class="course-badge">Cisco</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🛡️</div>
+                <h3>CyberOps</h3>
+                <p>Operações de Cibersegurança. Monitoramento, detecção de ameaças e resposta a incidentes.</p>
+                <span class="course-badge">Cisco</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🔍</div>
+                <h3>Introdução ao Pentest</h3>
+                <p>Conceitos fundamentais de teste de penetração, metodologias e ferramentas essenciais.</p>
+                <span class="course-badge">Segurança</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">⚔️</div>
+                <h3>Pentest na Prática</h3>
+                <p>Aplicação prática de técnicas de penetration testing em ambientes reais e controlados.</p>
+                <span class="course-badge">Avançado</span>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">📱</div>
+                <h3>Android Pentest</h3>
+                <p>Segurança em aplicações Android. Testes de vulnerabilidades em aplicações móveis.</p>
+                <span class="course-badge">Mobile</span>
+            </div>
+        </div>
+    </section>
+
+
+
         <h2 class="section-title">Habilidades & Ferramentas</h2>
         <div class="features-grid">
             <div class="card">
                 <h4>Desenvolvimento</h4>
                 <div class="tags">
-                    <span class="tag">PHP / Laravel</span><span class="tag">Python</span><span class="tag">SQL</span>
+                    <span class="tag">PHP / Laravel</span><span class="tag">Python</span><span class="tag">MySQL</span>
                 </div>
             </div>
             <div class="card">
                 <h4>Pentest & Redes</h4>
                 <div class="tags">
-                    <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">OWASP TOP 10</span><span class="tag">Wireshark</span><span class="tag">CCNA</span>
+                    <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">OWASP TOP 10</span><span class="tag">CyberOps</span><span class="tag">CCNA</span>
                 </div>
             </div>
         </div>
@@ -256,6 +396,12 @@
             <p>Luanda, Viana - Vila de Viana </p>
             <p>marcelinoikuma@gmail.com </p>
             <a href="mailto:marcelinoikuma@gmail.com" class="btn-main">Falar por E-mail</a>
+                    
+            <div class="social-container">
+                <a href="https://wa.me/244953727352" class="social-link" target="_blank">WhatsApp</a>
+                <a href="https://ao.linkedin.com/in/marcelino-ikuma-92b05b296" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Marcelino-Ikuma" class="social-link" target="_blank">GitHub</a>
+            </div>
         </div>
 
     </main>
